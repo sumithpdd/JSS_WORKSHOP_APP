@@ -1,0 +1,19 @@
+[
+  { "id": "jss-sdk", "label": "JSS SDK" },
+  { "id": "coupled", "label": "Coupled MVC" },
+  { "id": "components", "label": "Components" },
+  { "id": "headless", "label": "Headless decision" },
+  { "id": "sxa", "label": "SXA" },
+  { "id": "rendering-host", "label": "Rendering host" },
+  { "id": "layout-service", "label": "Layout Service" },
+  { "id": "dictionary", "label": "Dictionary" },
+  { "id": "graphql", "label": "GraphQL" },
+  { "id": "placeholders", "label": "Placeholders" },
+  { "id": "fields", "label": "Fields" },
+  { "id": "cli", "label": "JSS CLI" },
+  { "id": "authentication", "label": "Authentication" },
+  { "id": "application-modes", "label": "Application modes" },
+  { "id": "edge", "label": "Experience Edge" },
+  { "id": "tracking", "label": "Tracking" },
+  { "id": "forms", "label": "Forms" }
+]

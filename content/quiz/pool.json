@@ -1,0 +1,389 @@
+{
+  "limit": 20,
+  "questions": [
+    {
+      "id": "layout-format",
+      "concept": "layout-service",
+      "prompt": "What does the Layout Service return for a selected item?",
+      "choices": [
+        { "id": "a", "text": "JSON for the context, the route, and the placeholders", "correct": true },
+        { "id": "b", "text": "Finished HTML from the rendering engine", "correct": false },
+        { "id": "c", "text": "A Razor view compiled on the CD", "correct": false },
+        { "id": "d", "text": "Only the dictionary phrases for the language", "correct": false }
+      ],
+      "explain": "The Layout Service outputs JSON based on the item's presentation details. The rendering engine is the path that still produces HTML."
+    },
+    {
+      "id": "layout-parts",
+      "concept": "layout-service",
+      "prompt": "Which three parts are in a Layout Service response?",
+      "choices": [
+        { "id": "a", "text": "Sitecore context, route, and placeholders with components", "correct": true },
+        { "id": "b", "text": "Templates, workflows, and security roles", "correct": false },
+        { "id": "c", "text": "Hosts file, IIS binding, and API key", "correct": false },
+        { "id": "d", "text": "GraphQL schema, mocks, and a WebSocket", "correct": false }
+      ],
+      "explain": "Context holds language, pageEditing, and site info. The route holds the resolved item and its fields. Placeholders say which component goes where, with that component's data."
+    },
+    {
+      "id": "layout-query",
+      "concept": "layout-service",
+      "prompt": "In a Layout Service URL, what is sc_lang?",
+      "choices": [
+        { "id": "a", "text": "The language", "correct": true },
+        { "id": "b", "text": "The item path", "correct": false },
+        { "id": "c", "text": "The API key item ID", "correct": false },
+        { "id": "d", "text": "The placeholder key", "correct": false }
+      ],
+      "explain": "item is the path, sc_lang is the language, and sc_apikey is the API key item ID."
+    },
+    {
+      "id": "dictionary-job",
+      "concept": "dictionary",
+      "prompt": "What is the Dictionary Service for?",
+      "choices": [
+        { "id": "a", "text": "Labels and fixed text on components", "correct": true },
+        { "id": "b", "text": "The hero title an author changes per campaign", "correct": false },
+        { "id": "c", "text": "The placeholder tree for the route", "correct": false },
+        { "id": "d", "text": "The IIS bindings for the app hostname", "correct": false }
+      ],
+      "explain": "Dictionary phrases are fixed labels. A headline marketing changes is a field on a datasource."
+    },
+    {
+      "id": "graphql-integrated",
+      "concept": "graphql",
+      "prompt": "Where does an integrated GraphQL query run?",
+      "choices": [
+        { "id": "a", "text": "In-process, inside the Layout Service, reshaping that rendering's data", "correct": true },
+        { "id": "b", "text": "In the browser, as an HTTP call started by Apollo", "correct": false },
+        { "id": "c", "text": "Only in disconnected mode, against a mock server", "correct": false },
+        { "id": "d", "text": "On the Content Delivery role as a Razor rendering", "correct": false }
+      ],
+      "explain": "Integrated GraphQL is configured on the component and executed by the Layout Service. Connected GraphQL is the client request."
+    },
+    {
+      "id": "graphql-connected",
+      "concept": "graphql",
+      "prompt": "What does connected GraphQL query?",
+      "choices": [
+        { "id": "a", "text": "Your GraphQL endpoint, instead of changing the Layout Service output", "correct": true },
+        { "id": "b", "text": "The Component GraphQL Query field, with no front-end code", "correct": false },
+        { "id": "c", "text": "The dictionary file under /data/dictionary", "correct": false },
+        { "id": "d", "text": "The hosts file on the Sitecore server", "correct": false }
+      ],
+      "explain": "Connected GraphQL is an HTTP or WebSocket request from the client. JSS integrates it with Apollo through GraphQLData."
+    },
+    {
+      "id": "graphql-item-vs-datasource",
+      "concept": "graphql",
+      "prompt": "How is a GraphQL datasource field different from item?",
+      "choices": [
+        { "id": "a", "text": "datasource goes through the parseDataSource pipeline, the way MVC resolves a datasource", "correct": true },
+        { "id": "b", "text": "item runs submit actions and datasource only returns dictionary phrases", "correct": false },
+        { "id": "c", "text": "They are the same field with two names", "correct": false },
+        { "id": "d", "text": "datasource is only available in disconnected mode", "correct": false }
+      ],
+      "explain": "item retrieves the item. datasource resolves the value the same way a rendering datasource is resolved in MVC."
+    },
+    {
+      "id": "graphql-ui",
+      "concept": "graphql",
+      "prompt": "How do you open the GraphQL UI for an app endpoint?",
+      "choices": [
+        { "id": "a", "text": "Append /ui?sc_apikey=[your API key] to the endpoint", "correct": true },
+        { "id": "b", "text": "Open /sitecore/shell and choose Graph Browser from the ribbon", "correct": false },
+        { "id": "c", "text": "Run jss deploy config and read the terminal", "correct": false },
+        { "id": "d", "text": "Add tracking=false to the Layout Service URL", "correct": false }
+      ],
+      "explain": "The workshop UI is http://ex.sitecore-jss-workshop.sc/api/exercises/ui with the API key."
+    },
+    {
+      "id": "params-editor",
+      "concept": "fields",
+      "prompt": "What is the editor difference between a parameters template and params: [\"heading\"]?",
+      "choices": [
+        { "id": "a", "text": "A parameters template gives the author a field. A bare name list is a string a developer remembers", "correct": true },
+        { "id": "b", "text": "A bare name list is the only form Sitecore stores", "correct": false },
+        { "id": "c", "text": "They produce the same Experience Editor controls", "correct": false },
+        { "id": "d", "text": "params replaces the component fields", "correct": false }
+      ],
+      "explain": "Parameters configure the component and are defined on the manifest. The template is what the author sees."
+    },
+    {
+      "id": "placeholder-settings",
+      "concept": "placeholders",
+      "prompt": "What do you set on a Placeholder Settings item?",
+      "choices": [
+        { "id": "a", "text": "The placeholder key, the allowed controls, and whether it is editable", "correct": true },
+        { "id": "b", "text": "CORS origins, AllowedControllers, and the impersonation user", "correct": false },
+        { "id": "c", "text": "The rendering host URL and the editing host URL", "correct": false },
+        { "id": "d", "text": "The dictionary language and the phrase list", "correct": false }
+      ],
+      "explain": "Placeholder Settings live under Presentation. The key must match the name used in the app."
+    },
+    {
+      "id": "code-first-direction",
+      "concept": "cli",
+      "prompt": "Which way of starting can move to the other?",
+      "choices": [
+        { "id": "a", "text": "Code-first can move to Sitecore-first. The reverse is not the path", "correct": true },
+        { "id": "b", "text": "Sitecore-first can be exported back into disconnected YAML at any time", "correct": false },
+        { "id": "c", "text": "Both directions are the same import", "correct": false },
+        { "id": "d", "text": "Neither can change after the first deploy", "correct": false }
+      ],
+      "explain": "Code-first generates Sitecore artifacts on import. Sitecore-first leaves those artifacts to the Sitecore developer."
+    },
+    {
+      "id": "jss-start",
+      "concept": "application-modes",
+      "prompt": "What does jss start do?",
+      "choices": [
+        { "id": "a", "text": "Runs the app in disconnected mode against local JSON and YAML", "correct": true },
+        { "id": "b", "text": "Deploys config files into the Sitecore App_Config folder", "correct": false },
+        { "id": "c", "text": "Imports the manifest and opens Experience Editor", "correct": false },
+        { "id": "d", "text": "Renders the site through Node on the Content Delivery server", "correct": false }
+      ],
+      "explain": "Disconnected mode is a development mode. The browser renders, and the data is local. Connected mode is jss start:connected."
+    },
+    {
+      "id": "modes-practice",
+      "concept": "application-modes",
+      "prompt": "Which modes are the production set?",
+      "choices": [
+        { "id": "a", "text": "Integrated, API-only, and headless SSR. Integrated is also used while building", "correct": true },
+        { "id": "b", "text": "Disconnected and connected only", "correct": false },
+        { "id": "c", "text": "API-only is development, and disconnected is production", "correct": false },
+        { "id": "d", "text": "Headless SSR cannot run against a Sitecore CD", "correct": false }
+      ],
+      "explain": "Development is disconnected, connected, and integrated while you build. Production is integrated, API-only, and headless SSR."
+    },
+    {
+      "id": "deploy-config",
+      "concept": "cli",
+      "prompt": "What does jss deploy config do?",
+      "choices": [
+        { "id": "a", "text": "Copies the app's Sitecore config files onto the Sitecore instance", "correct": true },
+        { "id": "b", "text": "Creates a production JS bundle and imports content items", "correct": false },
+        { "id": "c", "text": "Opens the GraphQL UI", "correct": false },
+        { "id": "d", "text": "Writes the hosts file and the IIS binding", "correct": false }
+      ],
+      "explain": "jss deploy app is the build and the manifest import. jss deploy config is only the config files."
+    },
+    {
+      "id": "deploy-app",
+      "concept": "cli",
+      "prompt": "What does jss deploy app --includeContent --includeDictionary do?",
+      "choices": [
+        { "id": "a", "text": "Builds the app, imports content and dictionary items, and the app appears under /content", "correct": true },
+        { "id": "b", "text": "Only copies config into App_Config\\Include", "correct": false },
+        { "id": "c", "text": "Starts disconnected mode on localhost:3000", "correct": false },
+        { "id": "d", "text": "Disables page-view tracking", "correct": false }
+      ],
+      "explain": "After that import you can run integrated mode with Sitecore content, and you can run connected mode."
+    },
+    {
+      "id": "api-key-path",
+      "concept": "cli",
+      "prompt": "Where do you create the API key item?",
+      "choices": [
+        { "id": "a", "text": "/sitecore/system/Settings/Services/API Keys in the master database", "correct": true },
+        { "id": "b", "text": "/sitecore/content/home", "correct": false },
+        { "id": "c", "text": "/sitecore/layout/Renderings", "correct": false },
+        { "id": "d", "text": "/sitecore/templates/Project", "correct": false }
+      ],
+      "explain": "Set CORS Origins and AllowedControllers on that item. Wildcards are for this training. Production needs real values."
+    },
+    {
+      "id": "jss-or-sxa",
+      "concept": "sxa",
+      "prompt": "How do JSS and SXA split the work?",
+      "choices": [
+        { "id": "a", "text": "SXA owns the site skeleton. JSS is the front end that renders each component", "correct": true },
+        { "id": "b", "text": "You pick one. A site cannot use both", "correct": false },
+        { "id": "c", "text": "SXA is the React SDK and JSS is the toolbox", "correct": false },
+        { "id": "d", "text": "JSS replaces placeholder settings, page designs, and shared content", "correct": false }
+      ],
+      "explain": "JSS or SXA is the wrong question for a rebuild. They are used together."
+    },
+    {
+      "id": "headless-three",
+      "concept": "headless",
+      "prompt": "Which option adds a client library and decoupled rendering?",
+      "choices": [
+        { "id": "a", "text": "JavaScript Services", "correct": true },
+        { "id": "b", "text": "Services Client only", "correct": false },
+        { "id": "c", "text": "Experience Accelerator only", "correct": false },
+        { "id": "d", "text": "None of them. All three stop at OData", "correct": false }
+      ],
+      "explain": "Services Client, SXA, and JSS all return JSON and have security. Only JSS adds the client library and decoupled rendering."
+    },
+    {
+      "id": "ssc-role",
+      "concept": "headless",
+      "prompt": "What is the Services Client?",
+      "choices": [
+        { "id": "a", "text": "An OData item API", "correct": true },
+        { "id": "b", "text": "The React field helpers", "correct": false },
+        { "id": "c", "text": "The Node rendering host", "correct": false },
+        { "id": "d", "text": "The SXA toolbox", "correct": false }
+      ],
+      "explain": "SXA reuses components, layouts, and templates and adds a JSON content service. JSS is the SDK for the JavaScript application."
+    },
+    {
+      "id": "ssr",
+      "concept": "rendering-host",
+      "prompt": "What does server-side JavaScript rendering send to the browser first?",
+      "choices": [
+        { "id": "a", "text": "HTML from Node, then the UI library updates the page", "correct": true },
+        { "id": "b", "text": "A blank page until Apollo finishes", "correct": false },
+        { "id": "c", "text": "Razor markup from the MVC rendering engine", "correct": false },
+        { "id": "d", "text": "Only the dictionary JSON", "correct": false }
+      ],
+      "explain": "The browser sends an HTTP request to Node. Node returns HTML and JavaScript. Later updates stay in React, Angular, or Vue."
+    },
+    {
+      "id": "integrated-topology",
+      "concept": "rendering-host",
+      "prompt": "What is the warning on the integrated topology?",
+      "choices": [
+        { "id": "a", "text": "Node and the CD share CPU, and caching is all or nothing", "correct": true },
+        { "id": "b", "text": "Sitecore must sit on a public URL with no proxy", "correct": false },
+        { "id": "c", "text": "You cannot use the Layout Service", "correct": false },
+        { "id": "d", "text": "It is the only topology that scales Node and the CDs separately", "correct": false }
+      ],
+      "explain": "Integrated mode is a good fit for an embedded JSS app. Headless hosting is the one that scales the Node tier and the CDs apart."
+    },
+    {
+      "id": "tracking-default",
+      "concept": "tracking",
+      "prompt": "How does JSS track page views by default?",
+      "choices": [
+        { "id": "a", "text": "Through the Layout Service. Add tracking=false to turn that off", "correct": true },
+        { "id": "b", "text": "Through the tracking service, which is on by default", "correct": false },
+        { "id": "c", "text": "Only when you call the dictionary endpoint", "correct": false },
+        { "id": "d", "text": "Only in disconnected mode", "correct": false }
+      ],
+      "explain": "That default is configurable on the dataApi object. The separate tracking service stays off until Sitecore.JSS.TrackerServiceEnabled is true."
+    },
+    {
+      "id": "track-pageview",
+      "concept": "tracking",
+      "prompt": "What does a tracked page view require?",
+      "choices": [
+        { "id": "a", "text": "A Sitecore item ID. A route that is not an item can use a surrogate ID", "correct": true },
+        { "id": "b", "text": "Only the browser URL", "correct": false },
+        { "id": "c", "text": "A GraphQL mutation", "correct": false },
+        { "id": "d", "text": "The component to be open in Experience Editor", "correct": false }
+      ],
+      "explain": "The call is trackingApi.trackEvent with pageId and url, from sitecore-jss-tracking."
+    },
+    {
+      "id": "forms-disconnected",
+      "concept": "forms",
+      "prompt": "Where can you not use Sitecore Forms?",
+      "choices": [
+        { "id": "a", "text": "Disconnected mode", "correct": true },
+        { "id": "b", "text": "Integrated mode", "correct": false },
+        { "id": "c", "text": "A multistep form posted back to Sitecore", "correct": false },
+        { "id": "d", "text": "Any JSS app", "correct": false }
+      ],
+      "explain": "The Layout Service can return the form schema, the browser renders it, and the post runs the submit action on Sitecore. That path is not available while the app is disconnected."
+    },
+    {
+      "id": "auth-cookie",
+      "concept": "authentication",
+      "prompt": "How can a JSS app log into Sitecore?",
+      "choices": [
+        { "id": "a", "text": "The Services Client Authentication Service sets the .ASPXAUTH cookie. Test it in integrated mode because of CORS", "correct": true },
+        { "id": "b", "text": "Put the password in the Layout Service item query", "correct": false },
+        { "id": "c", "text": "Dictionary phrases carry the session", "correct": false },
+        { "id": "d", "text": "jss deploy config creates the logged-in user", "correct": false }
+      ],
+      "explain": "The Layout Service already respects the logged-in user and Sitecore security. The authentication call is what sets the cookie."
+    },
+    {
+      "id": "disconnected-graphql",
+      "concept": "graphql",
+      "prompt": "How does connected GraphQL run while the app is disconnected?",
+      "choices": [
+        { "id": "a", "text": "A mock GraphQL server is registered and requests are proxied to it", "correct": true },
+        { "id": "b", "text": "The browser calls the Sitecore CD directly with no proxy", "correct": false },
+        { "id": "c", "text": "Integrated queries are stored in the hosts file", "correct": false },
+        { "id": "d", "text": "It cannot be attempted until the app is imported", "correct": false }
+      ],
+      "explain": "The exercises app does this in disconnected-mode-proxy.js with createDisconnectedGraphqlService."
+    },
+    {
+      "id": "app-defaults",
+      "concept": "cli",
+      "prompt": "Where are the default JavaScript Services app settings defined?",
+      "choices": [
+        { "id": "a", "text": "Sitecore.JavaScriptServices.Apps.config. Your app config inherits them", "correct": true },
+        { "id": "b", "text": "The dictionary YAML for English", "correct": false },
+        { "id": "c", "text": "The placeholder key on the Home item", "correct": false },
+        { "id": "d", "text": "package.json dependencies only", "correct": false }
+      ],
+      "explain": "Apps are registered under javaScriptServices/apps. Check /sitecore/config/[yourappname].config, including hostName."
+    },
+    {
+      "id": "edge",
+      "concept": "edge",
+      "prompt": "What do you publish to when the rendering host reads Experience Edge?",
+      "choices": [
+        { "id": "a", "text": "A GraphQL delivery endpoint. A field change does not require a Node rebuild", "correct": true },
+        { "id": "b", "text": "The disconnected YAML files", "correct": false },
+        { "id": "c", "text": "A new MVC rendering for every field", "correct": false },
+        { "id": "d", "text": "The hosts file on each CD", "correct": false }
+      ],
+      "explain": "Experience Edge is a publishing target for items, layout, and media. The rendering host reads the published layout."
+    },
+    {
+      "id": "component-owns",
+      "concept": "fields",
+      "prompt": "On the hero, what owns the HTML and what owns the field values?",
+      "choices": [
+        { "id": "a", "text": "The React component owns the HTML. The layout document owns the field values", "correct": true },
+        { "id": "b", "text": "The dictionary owns both", "correct": false },
+        { "id": "c", "text": "The Razor view owns the HTML after the move to JSS", "correct": false },
+        { "id": "d", "text": "Search owns the hero template", "correct": false }
+      ],
+      "explain": "Search can sit in a placeholder beside the hero. It is a separate component."
+    },
+    {
+      "id": "coupled",
+      "concept": "coupled",
+      "prompt": "In a coupled CMS, who emits the HTML?",
+      "choices": [
+        { "id": "a", "text": "The Content Delivery role, as part of the same application that stores the content", "correct": true },
+        { "id": "b", "text": "A separate Node rendering host", "correct": false },
+        { "id": "c", "text": "The browser, from Layout Service JSON only", "correct": false },
+        { "id": "d", "text": "Experience Edge", "correct": false }
+      ],
+      "explain": "Coupled means content management, delivery, and presentation are one web application. A new channel repeats that presentation."
+    },
+    {
+      "id": "jss-sdk",
+      "concept": "jss-sdk",
+      "prompt": "What is JSS for a JavaScript developer?",
+      "choices": [
+        { "id": "a", "text": "A complete SDK for building the application with modern UI libraries, including modern rendering", "correct": true },
+        { "id": "b", "text": "A replacement for the SXA site skeleton", "correct": false },
+        { "id": "c", "text": "An OData item browser with no UI helpers", "correct": false },
+        { "id": "d", "text": "A hosts-file editor", "correct": false }
+      ],
+      "explain": "The libraries supply placeholder and field components. The same idea is published for React, React Native, Angular, and Vue."
+    },
+    {
+      "id": "root-placeholder",
+      "concept": "placeholders",
+      "prompt": "What must match between the React layout and Sitecore?",
+      "choices": [
+        { "id": "a", "text": "The placeholder name, such as jss-main", "correct": true },
+        { "id": "b", "text": "The dictionary phrase for Documentation", "correct": false },
+        { "id": "c", "text": "The deployment secret and the page title", "correct": false },
+        { "id": "d", "text": "The GraphQL mock return value", "correct": false }
+      ],
+      "explain": "The layout renders that placeholder, the manifest registers it, and package.json lists it in rootPlaceholders. Sitecore will not return a placeholder the component did not register."
+    }
+  ]
+}

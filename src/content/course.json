@@ -1,0 +1,210 @@
+{
+  "id": "jss-workshop",
+  "title": "JSS Workshop",
+  "description": "Learn Sitecore headless by building the training site you are learning from. Start in React, walk MVC to SXA to JSS, and finish by migrating the University of Reading homepage hero.",
+  "chapters": [
+    {
+      "id": "start-here",
+      "title": "Start here",
+      "summary": "Why this workshop exists, and where to read the docs.",
+      "pages": [
+        {
+          "id": "how-this-works",
+          "title": "Why we are here",
+          "minutes": 8,
+          "file": "01-start-here/01-how-this-works.md",
+          "concepts": ["jss-sdk"]
+        },
+        {
+          "id": "the-story",
+          "title": "One story, not six labs",
+          "minutes": 8,
+          "file": "01-start-here/02-the-story.md",
+          "concepts": ["jss-sdk"]
+        }
+      ]
+    },
+    {
+      "id": "mvc",
+      "title": "MVC",
+      "summary": "The coupled Sitecore you already know.",
+      "pages": [
+        {
+          "id": "coupled-cms",
+          "title": "The coupled CMS",
+          "minutes": 12,
+          "file": "02-mvc/01-coupled-cms.md",
+          "concepts": ["coupled", "components"]
+        },
+        {
+          "id": "uor-hero-today",
+          "title": "The Reading hero, as MVC",
+          "minutes": 12,
+          "file": "02-mvc/02-uor-hero-today.md",
+          "concepts": ["coupled"]
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "The headless decision",
+      "summary": "Coupled, pure headless, or hybrid.",
+      "pages": [
+        {
+          "id": "three-architectures",
+          "title": "Three architectures",
+          "minutes": 12,
+          "file": "03-decision/01-three-architectures.md",
+          "concepts": ["headless", "sxa", "jss-sdk"]
+        },
+        {
+          "id": "hybrid-for-a-university",
+          "title": "Hybrid, for a university",
+          "minutes": 12,
+          "file": "03-decision/02-hybrid-for-a-university.md",
+          "concepts": ["headless"]
+        }
+      ]
+    },
+    {
+      "id": "sxa",
+      "title": "SXA",
+      "summary": "Site structure before the head.",
+      "pages": [
+        {
+          "id": "site-skeleton",
+          "title": "The headless site skeleton",
+          "minutes": 12,
+          "file": "04-sxa/01-site-skeleton.md",
+          "concepts": ["sxa"]
+        },
+        {
+          "id": "jss-and-sxa",
+          "title": "JSS and SXA together",
+          "minutes": 10,
+          "file": "04-sxa/02-jss-and-sxa.md",
+          "concepts": ["sxa", "jss-sdk"]
+        },
+        {
+          "id": "rendering-host",
+          "title": "The rendering host",
+          "minutes": 10,
+          "file": "04-sxa/03-rendering-host.md",
+          "concepts": ["rendering-host", "application-modes"]
+        }
+      ]
+    },
+    {
+      "id": "jss",
+      "title": "JSS for React",
+      "summary": "The SDK and the Layout Service.",
+      "pages": [
+        {
+          "id": "react-sdk",
+          "title": "The React SDK",
+          "minutes": 10,
+          "file": "05-jss/01-react-sdk.md",
+          "concepts": ["jss-sdk"]
+        },
+        {
+          "id": "layout-service",
+          "title": "Layout Service",
+          "minutes": 12,
+          "file": "05-jss/02-layout-service.md",
+          "concepts": ["layout-service", "dictionary", "graphql"]
+        },
+        {
+          "id": "placeholders-and-fields",
+          "title": "Placeholders, fields, and where you start",
+          "minutes": 12,
+          "file": "05-jss/03-placeholders-and-fields.md",
+          "concepts": ["placeholders", "fields", "cli"]
+        }
+      ]
+    },
+    {
+      "id": "crossover",
+      "title": "Replace the hard-coded hero",
+      "summary": "The same component, three sources of truth.",
+      "pages": [
+        {
+          "id": "from-file-to-component",
+          "title": "From hard-coded content to a component",
+          "minutes": 10,
+          "file": "06-crossover/01-from-file-to-component.md",
+          "concepts": ["fields"]
+        },
+        {
+          "id": "open-the-studio",
+          "title": "Open the studio",
+          "minutes": 15,
+          "file": "06-crossover/02-open-the-studio.md",
+          "concepts": ["fields"]
+        }
+      ]
+    },
+    {
+      "id": "deliver",
+      "title": "Connect and deliver",
+      "summary": "Modes, Experience Edge, SitecoreAI.",
+      "pages": [
+        {
+          "id": "application-modes",
+          "title": "Application modes",
+          "minutes": 12,
+          "file": "07-deliver/01-application-modes.md",
+          "concepts": ["application-modes"]
+        },
+        {
+          "id": "edge-and-sitecoreai",
+          "title": "Experience Edge and SitecoreAI",
+          "minutes": 12,
+          "file": "07-deliver/02-edge-and-sitecoreai.md",
+          "concepts": ["edge"]
+        }
+      ]
+    },
+    {
+      "id": "capstone",
+      "title": "Capstone: the Reading hero",
+      "summary": "Migrate one banner. Leave room for Search.",
+      "pages": [
+        {
+          "id": "migrate-the-hero",
+          "title": "Migrate the hero",
+          "minutes": 20,
+          "file": "08-capstone/01-migrate-the-hero.md",
+          "concepts": ["fields", "placeholders"]
+        },
+        {
+          "id": "search-beside-the-hero",
+          "title": "Search beside the hero",
+          "minutes": 12,
+          "file": "08-capstone/02-search-beside-the-hero.md",
+          "concepts": ["placeholders"]
+        },
+        {
+          "id": "review",
+          "title": "What you can take back",
+          "minutes": 8,
+          "file": "08-capstone/03-review.md",
+          "concepts": ["jss-sdk", "headless"]
+        }
+      ]
+    },
+    {
+      "id": "appendix",
+      "title": "Appendix",
+      "summary": "API key and hosts for the Sitecore instance.",
+      "pages": [
+        {
+          "id": "sitecore-setup",
+          "title": "API key, hosts, and setup",
+          "minutes": 8,
+          "file": "09-appendix/01-api-key-and-hosts.md",
+          "concepts": ["cli", "graphql", "tracking", "forms", "placeholders", "authentication"]
+        }
+      ]
+    }
+  ]
+}

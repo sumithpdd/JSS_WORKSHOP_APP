@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-labelledby="title">
+  <title id="title">Authoring publishes to Experience Edge, which the rendering host reads</title>
+  <rect width="760" height="180" rx="16" fill="#f6f3ee"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#1c1917">
+    <rect x="24" y="48" width="180" height="84" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="114" y="84" text-anchor="middle" font-weight="700">Authoring</text>
+    <text x="114" y="106" text-anchor="middle" fill="#57534e" font-size="12">items and layout</text>
+    <rect x="290" y="48" width="180" height="84" rx="12" fill="#ffffff" stroke="#d6d3d1"/>
+    <text x="380" y="84" text-anchor="middle" font-weight="700">Experience Edge</text>
+    <text x="380" y="106" text-anchor="middle" fill="#57534e" font-size="12">published layout</text>
+    <rect x="556" y="48" width="180" height="84" rx="12" fill="#1c1917"/>
+    <text x="646" y="84" text-anchor="middle" font-weight="700" fill="#ffffff">Rendering host</text>
+    <text x="646" y="106" text-anchor="middle" fill="#e7e5e4" font-size="12">React draws HTML</text>
+    <path d="M204 90 H278" stroke="#DA291C" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M470 90 H544" stroke="#DA291C" stroke-width="2"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6" fill="#DA291C"/>
+    </marker>
+  </defs>
+</svg>
